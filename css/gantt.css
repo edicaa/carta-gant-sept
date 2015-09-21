@@ -1,0 +1,1020 @@
+
+body{
+  overflow: hidden;
+}
+/* -------------------------------------- GRIDIFY -----------------------------------*/
+.gdfTable {
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.gdfTable td, .gdfTable th {
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+  font-size: 14px
+}
+.gdfCell {
+  overflow: hidden;
+  padding:4px 2px
+}
+.gdfCell.noClip{
+  overflow: visible;
+}
+.gdfColHeader {
+  min-width: 5px;
+  height: 30px;
+}
+.gdfCell, .gdfColHeader {
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #b0b0b0;
+}
+.gdfCellInput {
+  border: 0 none;
+  font-size: 12px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #d4fbe8;
+}
+.gdfCellWrap {
+  border: 0 none;
+  font-size: 12px;
+  height: 17px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #ffcccc;
+}
+.gdfHResizing {
+  cursor: w-resize;
+}
+/* -------------------------------------- SPLITTER -----------------------------------*/
+.splitterContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.splitBox1{
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.splitBox2{
+  overflow-x: scroll;
+  overflow-y: auto;
+}
+
+
+.splitElement {
+  outline-style: none;
+  position: absolute;
+  height: 100%;
+}
+
+.vSplitBar {
+  width: 5px;
+  background-color: #aaa;
+  cursor: w-resize;
+  text-align: center;
+  color: white;
+}
+
+.fixHead{
+  position: absolute;
+  z-index: 2000;
+  top:0;
+}
+
+/* -------------------------------------- GANTT -----------------------------------*/
+
+
+.ganttTable{
+  table-layout:fixed;
+}
+.ganttTable td,.ganttTable th{
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+}
+.ganttHead1,.ganttHead2{
+  height:20px;
+}
+.ganttHead1 th, .ganttHead2 th{
+  border-left:1px solid #b0b0b0;
+  padding: 0;
+  margin: 0;
+}
+.ganttToday{
+  position:absolute;
+  top:0;
+  width:1px;
+  height:100%;
+  border-left:2px dotted #13AFA5;
+}
+.ganttHighLight{
+  position:absolute;
+  width:100%;
+  height:28px;
+  background-color:yellow;
+  opacity:.4;
+}
+.cont-menu{
+  background-color: #eeeeed;
+  margin: 0 auto 15px auto;
+}
+.ganttButtonBar{
+  text-align: center;
+  max-width: 1170px;
+  margin: 0 auto;
+  height: 150px;
+}
+.ganttButtonBar h1 {
+  background-color: #fff;
+  border: 1px solid #cbcaca;
+  display: inline-block;
+  width: 15%;
+  height: 121px;
+  text-align: center;
+  margin: 15px -1px 0 0;
+}
+.ganttButtonBar h1 img{
+  margin-top: 10%;
+  width: 90%;
+}
+.ganttButtonBar .buttons{
+  display: inline-block;
+  border: 1px solid #cbcaca;
+  border-bottom: none;
+  border-left: none;
+  background-color: #fff;
+  width: 85%;
+  height: 121px;
+  padding: 0;
+  text-align: center;
+  margin: 15px 0 0 0;
+  }
+.ganttButtonBar .buttons .button-ico,
+.ganttButtonBar .buttons .button-ico-send{
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+  border-bottom: 1px solid #cbcaca;
+  border-left: 1px solid #cbcaca;
+  border-right: none;
+  border-top: none;
+  font-size: 14px;
+  padding: 0;
+  width: 7.69%;
+  height: 60px;
+  margin: 0;
+  background-color: #fff;
+  text-align: center;
+}
+.ganttButtonBar .buttons .button-ico img{
+  border: 1px solid #fff;
+  height: 31px;
+}
+.ganttButtonBar .buttons .button-color{
+  display: inline-block;
+  background-color: #404a59;
+  border: 1px solid #404a59;
+  color: #fff;
+  float: left;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  vertical-align: top;
+  border: none;
+  font-size: 16px;
+  padding: 0;
+  width: 19.998%;
+  height: 60px;
+  margin: 0;
+  text-align: center;
+}
+
+.ganttButtonBar .buttons .button-ico .teamworkIcon{
+  color: #ccc;
+}
+.ganttButtonBar .buttons .button-ico .teamworkIcon:hover{
+  color: #999;
+}
+.ganttButtonBar .buttons .button {
+  display: none;
+}
+.ganttButtonBar .buttons .guardar {
+  background-color: #47a23d;
+  border: 1px solid #2d872c;
+  color:#fff;
+  cursor:pointer;
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 15px 3% 0 0;
+  padding: 6px 0;
+  text-transform: uppercase;
+  vertical-align: top;
+  width: 120px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  text-align: center
+}
+.ganttButtonSeparator{
+    display: none;
+}
+
+#workSpace .splitterContainer {
+  display: block;
+  max-width: 1160px;
+  width: 95%;
+  position: relative;
+  margin: auto;
+}
+#workSpace .splitterContainer .splitBox1{
+  position: absolute;
+  border: 1px solid #ccc;
+
+  -moz-border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px 0 0 2px;
+  -o-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  }
+#workSpace .splitterContainer .splitBox2{
+  border: 1px solid #ccc;
+  -moz-border-radius: 0 2px 2px 0;
+  -webkit-border-radius: 0 2px 2px 0;
+  -o-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+}
+#bwinPopupd{
+  width: 80% !important;
+  max-width: 550px !important;
+  position: relative !important;
+  height: auto !important;
+  top: 10px !important;
+  overflow: auto !important;
+  box-shadow: rgb(51, 51, 51) 1px 1px 6px !important;
+  border: 8px solid #404a59 !important;
+  margin: auto !important;
+  background-color: rgb(255, 255, 255)!important;
+}
+#bwinPopupd .ganttTaskEditor{
+  width: 95%; 
+  margin: auto;
+  padding: 15px;
+}
+#bwinPopupd .ganttTaskEditor .form{
+  display: inline-block;
+  float: left;
+  margin: 0 auto;
+  vertical-align: top;
+  width: 50%;
+}
+#bwinPopupd .ganttTaskEditor .check{
+  display: inline-block;
+  margin: 0 auto;
+  vertical-align: top;
+  width: 25%;
+  float: right;
+}
+
+
+
+
+
+.button span.teamworkIcon {
+  text-indent: -10px;
+}
+.button.textual span.teamworkIcon {
+  font-size: 140%
+}
+.ganttButtonBar .button.textual span.teamworkIcon{
+  font-size: 150%
+}
+.ganttButtonSeparator{
+  border-left:1px solid gray;
+  padding-right:10px;
+  margin-left:10px;
+  font-size: 130%
+}
+.ganttLines{
+  width:100%;
+  height:1px;
+  border-top:1px solid #eee;
+  z-index:1;
+}
+.ganttLinks{
+  z-index:10;
+}
+.end{
+  border-right:1px dotted #666
+}
+.holyH{
+  background-color: #f3dfd5;
+}
+.holy{
+  background-color: #FFF5E6;
+}
+/* -------------------------------------- TASK -----------------------------------*/
+.taskBoxDiv{
+  position:absolute;
+  height:25px;
+  margin-top:3px;
+  z-index:100;
+}
+.taskBoxDiv .layout {
+  height:100%;
+  color:#DB2727;
+  border-radius:2px;
+  background: #eee; /* Old browsers */
+  border:1px solid #bbb;
+}
+.taskBoxDiv .taskStatus {
+    left:5px;
+    top:10px;
+    position:absolute;
+    width:10px;
+    height:10px;
+}
+.taskBoxDiv .layout .milestone{
+  top:0;
+  position:absolute;
+  width:18px;
+  background: url(res/milestone.png) no-repeat;
+  height:18px;
+  display:none;
+}
+.taskBoxDiv .layout .milestone.end{
+  right:0;
+}
+.taskBoxDiv .layout .milestone.active{
+  display:block;
+}
+.taskBoxDiv.hasChild .layout{
+  border-top:2px solid black;
+}
+.taskBoxDiv .taskProgress{
+  height:5px;
+  position:absolute;
+}
+.taskBoxDiv .layout.extDep{
+  background-image:url(res/hasExternalDeps.png);
+}
+.taskLabel{
+  position:absolute;
+  height:28px;
+  color:black;
+  text-align:right;
+  padding-right:5px;
+  overflow:hidden;
+  left:-200px;
+  width:195px;
+  white-space:nowrap;
+}
+.taskDepLine {
+  border: 1px solid #9999ff;
+  overflow: hidden;
+  position: absolute;
+}
+.taskEditRow,.emptyRow {
+  height:30px;
+}
+.taskEditRow input{
+  border: 0 none;
+  font-size: 14px;
+  height: 20px;
+  margin: 0;
+  padding:0;
+  outline: 0;
+  width: 100%;
+  border-radius: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.taskEditRow input:focus{
+  font-weight: bold;
+}
+.taskEditRow.rowSelected td,.taskEditRow.rowSelected input{
+  background-color:#FFFF99;  
+}
+input[readonly]{
+  color: #c0c0c0;
+}
+.taskStatusBox{
+  position:absolute;
+  /*width:100px;*/
+  height:26px;
+  border:1px solid #a0a0a0;
+  background-color:#fff;
+  margin-top:-21px;
+  margin-left:-2px;
+  padding: 4px;
+  z-index: 100;
+}
+.taskStatus{
+  width:15px;
+  height:15px;
+  display:inline-block;
+  text-indent: 0;
+  position:relative;
+  box-shadow: none;
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0.20)
+}
+.taskStatus[status=STATUS_ACTIVE]{
+ background-color: #3BBF67;
+}
+.taskStatus[status=STATUS_DONE]{
+ background-color: #0099FF;
+}
+.taskStatus[status=STATUS_FAILED]{
+ background-color: #660066;
+}
+.taskStatus[status=STATUS_SUSPENDED]{
+ background-color: #fbb11e;
+}
+.taskStatus[status=STATUS_UNDEFINED]{
+ background-color: #ffffff;
+}
+.taskStatus.selected{
+  border:#666 2px solid;
+}
+.unselectable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.exp-controller{
+  display:inline-block;
+  width:16px;
+  height:16px;
+  position: relative;
+  top: 2px;
+  margin-left: -18px;
+}
+.expcoll{
+  cursor: pointer;
+  background-image: url(res/toggle-expand.png);
+}
+.expcoll.exp{
+  background-image: url(res/toggle_collapse.png);
+}
+.ui-resizable-helper { border: 1px dotted #00F;  }
+.ui-resizable-e, .ui-resizable-w {width: 5px;}
+.ui-draggable{
+  cursor:move;
+}
+/*--------------------------------------------------- SVG --------------------------------------------------*/
+.ganttSVGBox{
+  position: absolute;
+  top:0;
+  left: 0;
+  height: 100%;
+  background-color: transparent;
+  width: 100%;
+}
+.taskBoxSVG{
+  overflow: visible;
+}
+.taskBoxSVG .taskLayout{
+  stroke-width:0;
+  stroke:#999;
+  /*fill:url('#taskGrad'); do not work on firefox*/
+}
+.taskLinkPathSVG{
+  stroke:#9999ff;
+  stroke-width:3px;
+  fill:none;
+  cursor:pointer;
+}
+.ganttLinesSVG{
+  stroke:#eee;
+  stroke-width:1;
+}
+.ganttTodaySVG{
+  stroke-width:2px;
+  stroke:#13AFA5;
+  stroke-linecap:"round";
+  stroke-dasharray:2,2;
+}
+.taskStatusSVG[status=STATUS_ACTIVE]{
+  fill: #3BBF67;
+}
+.taskStatusSVG[status=STATUS_DONE]{
+  fill: #0099FF;
+}
+.taskStatusSVG[status=STATUS_FAILED]{
+  fill: #660066;
+}
+.taskStatusSVG[status=STATUS_SUSPENDED]{
+  fill: #fbb11e;
+}
+.taskStatusSVG[status=STATUS_UNDEFINED]{
+  fill: #f0f0f0;
+}
+.taskStatusSVG[status=STATUS_UNDEFINED] .taskLayout{
+  stroke: #ccc;
+  stroke-width:1;
+}
+.taskStatusSVG[status=STATUS_DONE] .textPerc,
+.taskStatusSVG[status=STATUS_ACTIVE] .textPerc,
+.taskStatusSVG[status=STATUS_FAILED] .textPerc{
+  fill: #fff;
+}
+.deSVG.deSVGdrag {
+  cursor: move;
+}
+.deSVG.deSVGhand {
+  cursor: ew-resize;
+}
+.linkHandleSVG{
+  display:none;
+  stroke:#888;
+  stroke-width:2px;
+  fill:#eee;
+  cursor: pointer;
+}
+.linkLineSVG{
+  stroke-width:5px;
+  stroke: #9999ff;
+  stroke-linecap:"round";
+  opacity: .5;
+    /*stroke-dasharray:5,5;*/
+}
+.linkOnProgress .deSVG.taskBoxSVG  {
+  cursor:cell;
+}
+.taskBoxSVG.linkOver .taskLayout{
+  stroke-width:1px;
+  stroke:#9999ff;
+  opacity: 1;
+}
+.taskLabelSVG {
+  stroke: none;
+  fill:#999;
+  font-size: 12px;
+}
+.critical .taskLinkPathSVG{
+  stroke:red;
+}
+.taskBoxSVG.critical .taskLayout{
+  stroke:red;
+}
+.focused .taskLinkPathSVG{
+  stroke-width:5px;
+  stroke: #4286ff;
+}
+.taskBoxSVG.focused .taskLayout{
+  stroke-width:3px;
+  stroke: #4286ff;
+}
+.userProfile {
+  font-size: 16px;
+  vertical-align: middle;
+  text-align: right;
+  margin: 0 5px 0 0;
+  padding: 5px;
+  float: right;
+  position: relative;
+  z-index: 50;
+  line-height: 40px;
+  vertical-align: middle;
+}
+.userLine {
+  max-width: 150px;
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;padding: 0;
+  vertical-align: middle;
+}
+.avatar {
+  vertical-align: middle;
+  padding: 1px;
+  width: 27px;
+  height: 27px;
+  border: 1px solid #dedede
+}
+/*--------------------------------------------------- Media queries  --------------------------------------------------*/
+.ganttButtonBar .button.textual span.teamworkIcon {
+  font-size: 130%;
+}
+.userLine {
+  display: none;
+}
+.button.textual span.teamworkIcon {
+  font-size: 120%;
+}
+.userLine {
+  display: none;
+}
+.button em {
+  display: none;
+}
+.ganttButtonSeparator {
+  margin-left: 2px;
+  padding-right: 6px;
+  font-size: 100%;
+}
+#logo{
+    display: none;
+  }
+#menu{
+  display: none;
+}
+/* Estilos #nav-mobile y lo ocultamos */
+#nav-mobile{
+  display: none;
+  background: url(../nav.png) no-repeat center center;
+  float: right;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  right: 0;
+  top:0;
+  opacity: .6;
+}   
+/* Agregaremos esta clase a #nav-mobile, cuando el menu mobile haya sido desplegado */
+#nav-mobile.nav-active{
+  opacity: 1;
+}
+
+/* Content */
+#content{
+    width: 80%;
+    margin: 60px 10%;
+    text-align: center;
+    overflow: hidden;
+}
+/* Mobile TODO */
+@media only screen and (max-width: 768px) {
+  .ganttButtonBar,
+  .ganttButtonBar h1,
+  .ganttButtonBar .buttons,
+  .ganttButtonBar .buttons .button-ico{
+    display: none;
+  }
+  .ganttButtonBar .buttons .button-ico .teamworkIcon{
+    color: #ccc;
+  }
+  .ganttButtonBar .buttons .button-ico .teamworkIcon:hover{
+    color: #999;
+  }
+  .ganttButtonBar .buttons .button {
+    background-color: #fbb11e;
+    border: 1px solid #fc9331;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 15px 0 0 0;
+    padding: 6px 0;
+    text-transform: uppercase;
+    vertical-align: top;
+    width: 28%;
+
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    text-align: center
+  }
+  .ganttButtonBar .buttons .guardar {
+    background-color: #47a23d;
+    border: 1px solid #2d872c;
+    color:#fff;
+    cursor:pointer;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 15px 3% 0 0;
+    padding: 6px 0;
+    text-transform: uppercase;
+    vertical-align: top;
+    width: 28%;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    text-align: center
+  }
+
+  .ganttButtonSeparator{
+    display: none;
+
+  }
+  .splitterContainer {
+    width: 95%;
+    margin: 15px 2.5%;
+    display: block;
+  }
+  #workSpace{
+    padding: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    width: 90%;
+    margin: 0px;
+  }
+
+
+
+  #bwinPopupd .ganttTaskEditor .form{
+    display: block;
+    margin: 0 auto;
+    vertical-align: top;
+    width: 100%;
+  }
+  #bwinPopupd .ganttTaskEditor .check{
+    display: block;
+    margin: 0 auto;
+    vertical-align: top;
+    width: 100%;
+  }
+
+
+
+  
+  #workSpace .splitterContainer {
+    display: block;
+  }
+  #workSpace .splitterContainer .splitElement{
+    outline-style: none;
+    position: relative;
+    text-align:left;
+    vertical-align: middle;
+    height: 100%;
+  }
+  #workSpace .splitterContainer .splitBox1{
+    border: 1px solid #ccc;
+    margin: 0 5%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 90% !important;
+    height: 70%;
+
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+  }
+  #workSpace .splitterContainer .splitBox2{
+    border: 1px solid #ccc;
+    margin: 15px 0 15px -56%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 90% !important; 
+    height: 70%;
+
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+  }
+  #workSpace .splitterContainer .vSplitBar {
+    display: none;
+  }
+
+  .splitElement {
+    outline-style: none;
+    position: absolute;
+  }
+  .fixHead{
+    position: absolute;
+    z-index: 2000;
+    top:0;
+  }
+  .button.textual {
+    font-size: 50%;
+  }
+  .button em {
+    display: none;
+  }
+
+  #logo{
+    background: url(../logo.jpg) no-repeat 0 0;
+    display: block;
+    margin: 15px 0 15px 2.5%;
+    width: 150px;
+    height: 65px;
+    text-indent: -9999px
+  }
+  /* mostramos #nav-mobile */
+  #nav-mobile{
+    display: block;
+  }
+  /* Fijamos nuestro nav en 100% ancho y dejamos de flotarlo  */
+  #menu{
+    display: block;
+    width: 95%;
+    margin: auto;
+    float: none;
+  }
+  /* Convertimos nuestra lista de enlaces en un menú horizontal */
+  #menu ul{
+    border-left: none;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 0;
+    margin: 0 auto 15px auto;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+  }
+  /* estilos para los LI del menu */
+  #menu li{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    height: 55px;
+    float: left;
+    margin: -1px 0 0 0;
+    text-align: center;
+    padding: 10px 0;
+    list-style: none;
+    color: #ccc;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-bottom: none;
+  }
+  #menu .li2{
+    display: inline-block;
+    vertical-align: top;
+    width: 33.33%;
+    height: 55px;
+    float: left;
+    margin: -1px 0 0 0;
+    text-align: center;
+    padding: 10px 0;
+    list-style: none;
+    color: #ccc;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-bottom: none;
+  }
+  #menu .btn{
+    border-radius: 0px;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    height: 55px;
+    float: left;
+    margin: -1px 0 0 0;
+    text-align: center;
+    padding: 10px 0;
+    list-style: none;
+    background-color: #404a59;
+    border: 1px solid #404a59;
+    border-right: none;
+    border-bottom: none;
+  }
+  /* Quitamos el borde del ultimo item del menú */
+  }
+  #menu .btn a{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    padding: 3px 0 0 0;
+    height: auto;
+  }
+  #menu li a{
+    font-size: 14px;
+    display: block;
+    padding: 0;
+    height: auto;
+    line-height: normal;
+  }
+  /* Agregamos una animación al despligue del menú */
+  #menu ul.open-menu{
+    max-height: 550px;
+    -webkit-transition: max-height .4s;
+    -moz-transition: max-height .4s;
+    -ms-transition: max-height .4s;
+    -o-transition: max-height .4s;
+    transition: max-height .4s;
+  }
+}
+@media only screen and (max-width: 568px) {
+  .ganttButtonBar h1{
+    display: none;
+  }
+  .ganttButtonBar .buttons{
+    border: 1px solid #e7e6e6;
+    width: 90%;
+    padding: 15px 2.5%;
+    margin: 15px 0;
+    text-align: center;
+    margin: 15px 5%;
+
+    box-shadow: 0 1px 5px #eee;
+
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+  }
+  .ganttButtonBar .buttons .button-ico {
+    display: none;
+  }
+  .ganttButtonBar .buttons .button-ico .teamworkIcon{
+    color: #ccc;
+  }
+  .ganttButtonBar .buttons .button-ico .teamworkIcon:hover{
+    color: #999;
+  }
+  .ganttButtonBar .buttons .button {
+    background-color: #fbb11e;
+    border: 1px solid #fc9331;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 15px 0 0 0;
+    max-width: 130px;
+    padding: 6px 0;
+    text-transform: uppercase;
+    vertical-align: top;
+    width: 40%;
+
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    text-align: center
+  }
+  .ganttButtonBar .buttons .guardar {
+    background-color: #47a23d;
+    border: 1px solid #2d872c;
+    color:#fff;
+    cursor:pointer;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 15px auto 0 auto;
+    max-width: 120px;
+    padding: 6px 0;
+    text-transform: uppercase;
+    vertical-align: top;
+    width: 50%;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+    text-align: center
+  }
+  #workSpace{
+    padding: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    width: 90%;
+    margin: 0px;
+  }
+
+  #workSpace .splitterContainer {
+    display: block;
+  }
+  #workSpace .splitterContainer .splitElement{
+    outline-style: none;
+    position: relative;
+    text-align:left;
+    vertical-align: middle;
+    height: 100%;
+  }
+  #workSpace .splitterContainer .splitBox1{
+    margin: 0 5%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 90% !important;
+    height: 50%;
+  }
+  #workSpace .splitterContainer .splitBox2{
+    margin-left: -56%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 90% !important; 
+    height: 50%;
+  }
+  #workSpace .splitterContainer .vSplitBar {
+    display: none;
+  }
+
+}
